@@ -1,4 +1,6 @@
 import React from "react";
+import { Provider } from "react-redux";
+import Store from "./telas/reducer";
 import "./estilos/style.css";
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
@@ -8,7 +10,9 @@ export default function App() {
   return (
     <>
       <Header />
-      <Menu />
+      <Provider store={Store}>
+        <Menu />
+      </Provider>
       <Footer />
     </>
   );

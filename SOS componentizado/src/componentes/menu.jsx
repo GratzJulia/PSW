@@ -3,6 +3,7 @@ import "../estilos/style.css";
 import TelaCadastro from "../telas/telaCadastro";
 import TelaBusca from "../telas/telaBusca";
 import TelaLogin from "../telas/telaLogin";
+import TelaHistorico from "../telas/telaHistorico";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 function Menu() {
@@ -34,7 +35,7 @@ function Menu() {
           </Route>
 
           <Route exact path="/historico">
-            {/* modelo de paths */}
+            <TelaHistorico />
           </Route>
 
           <Route exact path="/login">
