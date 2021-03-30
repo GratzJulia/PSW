@@ -1,7 +1,7 @@
 import { createStore } from "redux";
 import mockSintoma from "../mocks/mockSintoma";
 
-const estadoInicial = mockSintoma.Sintomas;
+const estadoInicial = mockSintoma;
 
 function sintoma(state = estadoInicial, action) {
   switch (action.type) {
