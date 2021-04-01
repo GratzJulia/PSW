@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 export default function() {
   const sintomas = useSelector(state => state.Sintomas);
   const atendimentos = useSelector(state => state.Atendimentos);
-  console.log(atendimentos);
+  
   return (
     <div className="flexible">
       {sintomas.map(sintoma => (

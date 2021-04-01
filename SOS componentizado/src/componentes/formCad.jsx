@@ -6,7 +6,9 @@ import mockPtoAtd from "../mocks/entPA";
 import mockAtd from "../mocks/entAt";
 
 function handleSubmit(event) {
-  alert("Uma cadastro foi enviado: ");
+  event.preventDefault();
+  //console.log(event);
+  alert("Salvando... Aguarde.");
 }
 
 function PrimaryForm(props) {
@@ -29,14 +31,24 @@ function PrimaryForm(props) {
       break;
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form>
       {lista.map(item => (
         <>
-          {console.log(lista)}
-          <label>{item}: *</label>
-          <input type="text" className="form-control" />
+          <label key={props.entidade.concat(item)}>{item}: *</label>
+          <input
+            key={props.entidade.concat("-" + item)}
+            type="text"
+            className="form-control"
+            placeholder={props.entidade.concat("-" + item)}
+          />
         </>
-      ))}      
+      ))}
+      <input
+        type="button"
+        id="btn_cad"
+        value="Cadastrar"
+        onClick={handleSubmit}
+      />
     </form>
   );
 }

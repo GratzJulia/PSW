@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../estilos/style.css";
 import mocks from "../mock";
-import Button from "../componentes/button";
 import Formulario from "../componentes/formCad";
 
 function ConteudoC() {
@@ -16,19 +15,13 @@ function ConteudoC() {
         defaultValue={""}
       >
         {Entidades.map(ent => (
-          <option value={ent} key={ent}>
+          <option key={ent} value={ent}>
             {ent}
           </option>
         ))}
       </select>
       <br /> <br />
       {formulario}
-      <Button
-        type="button"
-        id="btn_cad"
-        name="Cadastrar"
-        onClick={() => console.log("cadastrar.")}
-      />
     </div>
   );
 }
