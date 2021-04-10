@@ -20,8 +20,8 @@ const schemaValidacoes = yup.object().shape({
 const obj = { usuario: "", senha: "" };
 
 function enviar(event) {
-  event.preventDefault();
-  alert("Logando... Aguarde.");
+  console.log(event);
+  alert("Logando usuário '" + event.usuario + "'");
 }
 
 const Login = () => (
